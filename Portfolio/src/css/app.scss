@@ -138,85 +138,114 @@ html {
     border-radius: 10px;
     min-width: 120px;
 }
-.skill-image{
+.skill-image {
     width: 90px;
     object-fit: cover;
     border-radius: 10px;
 }
-.skill-category{
+.skill-category {
     font-family: var(--main-font);
     font-size: 20px;
     font-weight: 500;
     text-align: center;
     margin-bottom: 8px;
 }
-.skill-par{
+.skill-par {
     background-color: var(--white);
     border-radius: 20px;
     box-sizing: border-box;
     padding: 24px 16px;
     margin: 0 auto;
-    margin-bottom: 32px; 
+    margin-bottom: 32px;
     max-width: 780px;
 }
-.skill-name{
+.skill-name {
     font-family: var(--main-font);
     font-size: 14px;
     padding: 4px 0;
 }
-.exp-ele{
+.exp-ele {
     flex: 1;
     max-width: 300px;
 }
-.h100svh-center{
+.h100svh-center {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.my-prof{
+.my-prof {
     width: 400px;
     max-width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 20px;
 }
-.prof-par{
+.prof-par {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
     font-family: var(--main-font);
-    margin:0 auto;
+    margin: 0 auto;
     margin-bottom: 100px;
     color: var(--theme-color);
-
 }
-.prof-right{
+.prof-right {
     flex: 1;
     max-width: 600px;
 }
-.prof-name{
+.prof-name {
     font-size: 30px;
     font-weight: 500;
 }
-.prof-name span{
+.prof-name span {
     font-size: 20px;
     font-weight: normal;
 }
-
-@media (min-width: 481px) { 
-
-  
-    .omo{
-        display: none;
-        
-    }
+.contact-form-input{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form-input p{
+    font-family: var(--main-font);
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.contact-form-input span{
+    background-color: var(--q-secondary);
+    color: var(--white);
+    box-sizing: border-box;
+    padding: 1px 4px;
+    margin-left: 4px;
+    border-radius: 4px;
+    font-size: 11px;
+    padding-top: 0;
+}
+.form-card{
+    max-width: 780px;
+    margin: 0 auto;
+    border-radius: 20px;
+    min-height: calc(100svh - 50px);
+}
+.cr{
+    font-size: 10px;
+    text-align: center;
 
 }
+.wide-btn{
+    width: 100%;
+    max-width: 400px;
+}
+@media (min-width: 481px) {
+    .omo {
+        display: none;
+    }
+}
 
-@media (max-width: 480px) { 
-    .head-section{
+@media (max-width: 480px) {
+    .head-section {
         max-width: 100%;
         padding: 0;
     }
@@ -229,35 +258,34 @@ html {
     .head-section .name {
         font-size: 24px;
     }
-    .name span{
+    .name span {
         font-size: 14px;
     }
-    .col-12{
+    .col-12 {
         margin: 0 auto;
         box-sizing: border-box;
         max-width: 100%;
     }
-    .exp-ele-par{
+    .exp-ele-par {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 16px;
     }
-    .exp-ele{
+    .exp-ele {
         width: 100%;
     }
-    .prof-par{
+    .prof-par {
         display: flex;
         flex-direction: column;
     }
-    .work-frame{
+    .work-frame {
         padding: 0;
         max-width: 100%;
         min-width: 100%;
         margin-bottom: 100px;
     }
-    .work-frame .main-text{
-
+    .work-frame .main-text {
     }
     .work-frame img {
         width: 100%;
@@ -268,6 +296,8 @@ html {
         object-fit: contain;
         object-position: center;
     }
-
-
+    .form-card{
+        border-radius: 0px;
+    
+    }
 }

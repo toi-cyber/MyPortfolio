@@ -1,45 +1,33 @@
 <template>
-  <q-form @submit.prevent="onSubmit" @reset="onReset" ref="formRef">
-    <q-card flat class="q-pa-md">
+
+  <q-card flat class="q-pa-md form-card">
+    <q-form @submit.prevent="onSubmit" @reset="onReset" ref="formRef">
       <q-card-section>
         <div class="text-h6">お問い合わせフォーム</div>
-        <q-input
-          filled
-          v-model="form.name"
-          label="お名前"
-          required
-          class="q-mb-md"
-        />
-        <q-input
-          filled
-          v-model="form.email"
-          label="メールアドレス"
-          type="email"
-          required
-          class="q-mb-md"
-        />
-        <q-input
-          filled
-          v-model="form.subject"
-          label="件名"
-          required
-          class="q-mb-md"
-        />
-        <q-input
-          filled
-          v-model="form.message"
-          label="メッセージ"
-          type="textarea"
-          autogrow
-          required
-        />
+        <p>以下のフォームからお問い合わせができます。どんな内容でも大歓迎ですのでどうぞ気楽にご連絡ください。</p>
+
+        <label class="contact-form-input">
+          <p>お名前 <span>必須</span></p>
+          <q-input dense filled v-model="form.name" required class="q-mb-md" />
+        </label>
+
+        <label class="contact-form-input">
+          <p>メールアドレス <span>必須</span></p>
+          <q-input dense filled v-model="form.email" type="email" required class="q-mb-md" />
+        </label>
+
+        <label class="contact-form-input">
+          <p>メッセージ <span>必須</span></p>
+          <q-input dense filled v-model="form.message" type="textarea" autogrow required />
+        </label>
+
       </q-card-section>
-      <q-card-actions align="right">
-        <q-btn label="リセット" color="grey" @click="onReset" flat />
-        <q-btn label="送信" color="primary" type="submit" />
+      <q-card-actions align="center" style="padding:15px;">
+        <q-btn class="wide-btn" label="送信" color="primary" type="submit" />
       </q-card-actions>
-    </q-card>
-  </q-form>
+    </q-form>
+  </q-card>
+
 </template>
 
 <script>
@@ -49,7 +37,6 @@ export default {
       form: {
         name: '',
         email: '',
-        subject: '',
         message: ''
       }
     };
@@ -64,16 +51,6 @@ export default {
         this.onReset(); // フォームをリセット
       }
     },
-    onReset() {
-      // フォームをリセット
-      this.form = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      };
-      this.$refs.formRef.resetValidation();
-    }
   }
 };
 </script>

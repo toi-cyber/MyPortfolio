@@ -1,12 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header>
-      <q-toolbar>
-
-
-
-      </q-toolbar>
-    </q-header>
+   
 
     <q-page-container style="padding-top: 0;">
       <q-page padding>
@@ -27,87 +21,32 @@
 
 
 
-          <!-- 作品 -->
           <div class="col-12">
             <q-card flat class="section-card">
               <q-card-section>
                 <div class="section-title">WORKS</div>
                 <q-list class="works-list">
-                  <q-item class="work-frame">
-                    <img src="../assets/torabit.png" alt="">
+                  <q-item
+                    v-for="(work, index) in works"
+                    :key="index"
+                    class="work-frame"
+                  >
+                    <img :src="work.image" :alt="work.alt" />
                     <q-item-section>
-                      <p class="genre">シャドーイングサービス</p>
-                      <p class="product-name">TORAbit <q-btn round flat color="primary" icon="link" /></p>
-                      <p class="main-text">英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。</p>
+                      <p class="genre">{{ work.genre }}</p>
+                      <p class="product-name">
+                        {{ work.productName }}
+                        <q-btn round flat color="primary" icon="link" />
+                      </p>
+                      <p class="main-text">{{ work.description }}</p>
                       <span class="work-tag-list">
-                        <q-icon color="primary" size="20px" name="smartphone" />
-                        <q-icon color="primary" size="20px" name="desktop_windows" />
-                      </span>
-                    </q-item-section>
-                  </q-item>
-
-                  <q-item class="work-frame">
-                    <img src="../assets/torabit.png" alt="">
-                    <q-item-section>
-                      <p class="genre">施工作業共有サービス</p>
-                      <p class="product-name">施工AI <q-btn round flat color="primary" icon="link" /></p>
-                      <p class="main-text">英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。</p>
-                      <span class="work-tag-list">
-                        <q-icon color="primary" size="20px" name="smartphone" />
-                        <q-icon color="primary" size="20px" name="desktop_windows" />
-                      </span>
-                    </q-item-section>
-                  </q-item>
-
-
-                  <q-item class="work-frame">
-                    <img src="../assets/torabit.png" alt="">
-                    <q-item-section>
-                      <p class="genre">業務共有サービス</p>
-                      <p class="product-name">TORAbit <q-btn round flat color="primary" icon="link" /></p>
-                      <p class="main-text">英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。</p>
-                      <span class="work-tag-list">
-                        <q-icon color="primary" size="20px" name="smartphone" />
-                        <q-icon color="primary" size="20px" name="desktop_windows" />
-                      </span>
-                    </q-item-section>
-                  </q-item>
-
-                  <q-item class="work-frame">
-                    <img src="../assets/torabit.png" alt="">
-                    <q-item-section>
-                      <p class="genre">施工作業共有サービス</p>
-                      <p class="product-name">施工AI <q-btn round flat color="primary" icon="link" /></p>
-                      <p class="main-text">英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。</p>
-                      <span class="work-tag-list">
-                        <q-icon color="primary" size="20px" name="smartphone" />
-                        <q-icon color="primary" size="20px" name="desktop_windows" />
-                      </span>
-                    </q-item-section>
-                  </q-item>
-
-                  <q-item class="work-frame">
-                    <img src="../assets/torabit.png" alt="">
-                    <q-item-section>
-                      <p class="genre">施工作業共有サービス</p>
-                      <p class="product-name">施工AI <q-btn round flat color="primary" icon="link" /></p>
-                      <p class="main-text">英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。</p>
-                      <span class="work-tag-list">
-                        <q-icon color="primary" size="20px" name="smartphone" />
-                        <q-icon color="primary" size="20px" name="desktop_windows" />
-                      </span>
-                    </q-item-section>
-                  </q-item>
-
-                  <q-item class="work-frame">
-                    <img src="../assets/torabit.png" alt="">
-                    <q-item-section>
-                      <p class="genre">施工作業共有サービス</p>
-                      <p class="product-name">施工AI <q-btn round flat color="primary" icon="link" /></p>
-                      <p class="main-text">英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。</p>
-                      <span class="work-tag-list">
-                        <q-icon color="primary" size="20px" name="smartphone" />
-                        <q-icon color="primary" size="20px" name="desktop_windows" />
+                        <q-icon
+                          v-for="(icon, iconIndex) in work.icons"
+                          :key="iconIndex"
+                          :color="icon.color"
+                          :size="icon.size"
+                          :name="icon.name"
+                        />
                       </span>
                     </q-item-section>
                   </q-item>
@@ -194,7 +133,7 @@
 
 
           <!-- スキルセット -->
-          <div class="col-12">
+          <div class="col-12" id="skills">
             <q-card flat class="section-card">
               <q-card-section>
                 <div class="section-title">SKILLS</div>
@@ -305,6 +244,58 @@ export default {
             { name: 'AWS', icon: 'devicon-amazonwebservices-plain', level: 3 },
           ]
         }
+      ],
+
+      works: [
+        {
+          image: './src/assets/torabit.png',
+          alt: 'TORAbit Image',
+          genre: 'シャドーイングサービス',
+          productName: 'TORAbit',
+          description:
+            '英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        {
+          image: './src/assets/torabit.net_lp_.png',
+          alt: 'TORAbit Image',
+          genre: 'シャドーイングサービス',
+          productName: 'TORAbit LP',
+          description:
+            'TORAbitのランディングページです。ユーザーのニーズに訴えかける配置、配色を意識しています。',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        {
+          image: './src/assets/grasapo.jp_.png',
+          alt: '施工AI Image',
+          genre: '総合情報サイト',
+          productName: 'グラサポ',
+          description:
+            '施工作業を効率的に共有できるサービスです。リアルタイムでの情報共有を可能にします。',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        {
+          image: './src/assets/grasapo.jp_.png',
+          alt: '施工AI Image',
+          genre: '施工作業共有サービス',
+          productName: '施工AI',
+          description:
+            '施工作業を効率的に共有できるサービスです。リアルタイムでの情報共有を可能にします。',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        
       ],
 
 
