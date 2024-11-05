@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-   
+
 
     <q-page-container style="padding-top: 0;">
       <q-page padding>
@@ -20,33 +20,24 @@
           </div>
 
 
-
           <div class="col-12">
             <q-card flat class="section-card">
               <q-card-section>
                 <div class="section-title">WORKS</div>
                 <q-list class="works-list">
-                  <q-item
-                    v-for="(work, index) in works"
-                    :key="index"
-                    class="work-frame"
-                  >
+                  <q-item v-for="(work, index) in works" :key="index" class="work-frame">
                     <img :src="work.image" :alt="work.alt" />
                     <q-item-section>
                       <p class="genre">{{ work.genre }}</p>
                       <p class="product-name">
                         {{ work.productName }}
-                        <q-btn round flat color="primary" icon="link" />
+                        <q-btn v-if="work.url" dense round flat color="primary" icon="link"
+                          @click="openExternalLink(work.url)" />
                       </p>
                       <p class="main-text">{{ work.description }}</p>
                       <span class="work-tag-list">
-                        <q-icon
-                          v-for="(icon, iconIndex) in work.icons"
-                          :key="iconIndex"
-                          :color="icon.color"
-                          :size="icon.size"
-                          :name="icon.name"
-                        />
+                        <q-icon v-for="(icon, iconIndex) in work.icons" :key="iconIndex" :color="icon.color"
+                          :size="icon.size" :name="icon.name" />
                       </span>
                     </q-item-section>
                   </q-item>
@@ -54,6 +45,7 @@
               </q-card-section>
             </q-card>
           </div>
+
 
           <!-- 得意なこと -->
           <div class="h100svh-center">
@@ -254,6 +246,7 @@ export default {
           productName: 'TORAbit',
           description:
             '英語学習をサポートするwebサービスです。シャドーイング、フレーズ暗記がブラウザできます。',
+          url: 'https://torabit.net/userlogin/loginpage.php',
           icons: [
             { color: 'primary', size: '20px', name: 'smartphone' },
             { color: 'primary', size: '20px', name: 'desktop_windows' },
@@ -266,6 +259,7 @@ export default {
           productName: 'TORAbit LP',
           description:
             'TORAbitのランディングページです。ユーザーのニーズに訴えかける配置、配色を意識しています。',
+          url: 'https://torabit.net/lp/',
           icons: [
             { color: 'primary', size: '20px', name: 'smartphone' },
             { color: 'primary', size: '20px', name: 'desktop_windows' },
@@ -278,6 +272,7 @@ export default {
           productName: 'グラサポ',
           description:
             '施工作業を効率的に共有できるサービスです。リアルタイムでの情報共有を可能にします。',
+          url: 'https://grasapo.jp/#/',
           icons: [
             { color: 'primary', size: '20px', name: 'smartphone' },
             { color: 'primary', size: '20px', name: 'desktop_windows' },
@@ -289,14 +284,41 @@ export default {
           genre: '施工作業共有サービス',
           productName: '施工AI',
           description:
-            '施工作業を効率的に共有できるサービスです。リアルタイムでの情報共有を可能にします。',
+            '施工作業を効率的に共有できるサービスです。近日中に公開予定です。',
+          url: '',
           icons: [
             { color: 'primary', size: '20px', name: 'smartphone' },
             { color: 'primary', size: '20px', name: 'desktop_windows' },
           ],
         },
-        
+        {
+          image: './src/assets/koemane.png',
+          alt: 'AI声真似 Image',
+          genre: 'AIボイス生成サービス',
+          productName: 'AI声真似（仮）',
+          description:
+            '文章から有名人などの声に似せた朗読音声を生成するサービスです。近日中に公開予定です。',
+          url: '',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        {
+          image: './src/assets/my-prof.jpg',
+          alt: '施工AI Image',
+          genre: 'ポートフォリオサイト',
+          productName: 'TOI TAMURAのポートフォリオ',
+          description:
+            '私のポートフォリオサイトです。わかりやすさを追求した配置、配色を意識しています。',
+          url: 'https://www.toitamura-portfolio.jp/#/',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
       ],
+
 
 
       expertise: [
@@ -356,6 +378,11 @@ export default {
         { text: '彼のコードは常にクリーンで保守性が高く、チーム全体の生産性向上に大きく貢献しました。', author: '同僚のエンジニア' },
       ],
     }
-  }
+  },
+  methods: {
+    openExternalLink(url) {
+      window.open(url, '_blank');
+    },
+  },
 }
 </script>

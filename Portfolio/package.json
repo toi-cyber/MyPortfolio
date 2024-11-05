@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "webデザイナー・システムエンジニアの田村といのポートフォリオです。",
+  "productName": "ポートフォリオ TOI TAMURA",
   "author": "toy <128814826+toi-cyber@users.noreply.github.com>",
   "private": true,
   "scripts": {

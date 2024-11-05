@@ -46,12 +46,14 @@ html {
     min-width: 400px;
     flex: 1;
     max-width: 500px;
+    margin-bottom: 16px;
 }
 .work-frame img {
     width: 100%;
+    aspect-ratio: 16/10;
     border-radius: 10px;
     box-shadow: 0px 0px 15px -5px #777777;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 .work-frame .genre {
@@ -167,6 +169,9 @@ html {
 .exp-ele {
     flex: 1;
     max-width: 300px;
+    min-width: 200px;
+    box-sizing: border-box;
+    padding: 16px;
 }
 .h100svh-center {
     min-height: 100svh;
@@ -176,7 +181,7 @@ html {
 }
 .my-prof {
     width: 400px;
-    max-width: 100%;
+    max-width: 50svw;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 20px;
@@ -289,15 +294,12 @@ html {
     }
     .work-frame img {
         width: 100%;
-
-        box-sizing: border-box;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px -5px #777777;
-        object-fit: contain;
-        object-position: center;
     }
     .form-card{
         border-radius: 0px;
     
+    }
+    .my-prof {
+        max-width: 100%;
     }
 }
