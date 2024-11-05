@@ -278,19 +278,7 @@ export default {
             { color: 'primary', size: '20px', name: 'desktop_windows' },
           ],
         },
-        {
-          image: './src/assets/grasapo.jp_.png',
-          alt: '施工AI Image',
-          genre: '施工作業共有サービス',
-          productName: '施工AI',
-          description:
-            '施工作業を効率的に共有できるサービスです。近日中に公開予定です。',
-          url: '',
-          icons: [
-            { color: 'primary', size: '20px', name: 'smartphone' },
-            { color: 'primary', size: '20px', name: 'desktop_windows' },
-          ],
-        },
+        
         {
           image: './src/assets/koemane.png',
           alt: 'AI声真似 Image',
@@ -305,8 +293,21 @@ export default {
           ],
         },
         {
+          image: './src/assets/signage.png',
+          alt: 'サイネージサイト Image',
+          genre: 'デジタルサイネージ管理サイト',
+          productName: 'iBoardSignage',
+          description:
+            'デジタルサイネージをクラウド上でリアルタイム管理するサイトです。近日中に公開予定です。',
+          url: '',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        {
           image: './src/assets/my-prof.jpg',
-          alt: '施工AI Image',
+          alt: 'ポートフォリオサイト Image',
           genre: 'ポートフォリオサイト',
           productName: 'TOI TAMURAのポートフォリオ',
           description:

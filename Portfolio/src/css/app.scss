@@ -50,11 +50,11 @@ html {
 }
 .work-frame img {
     width: 100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/9;
     border-radius: 10px;
     box-shadow: 0px 0px 15px -5px #777777;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
 }
 .work-frame .genre {
     color: var(--q-secondary);

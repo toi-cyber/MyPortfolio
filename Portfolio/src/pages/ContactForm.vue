@@ -29,7 +29,7 @@
 
       </q-card-section>
       <q-card-actions align="center" style="padding:15px;">
-        <q-btn class="wide-btn" label="送信" color="primary" type="submit" />
+        <q-btn class="wide-btn" label="送信" color="secondary" type="submit" />
       </q-card-actions>
     </q-form>
   </q-card>
@@ -48,15 +48,31 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      // 送信処理 (例: APIコール)
-      if (this.$refs.formRef.validate()) {
-        console.log("送信されました:", this.form);
-        // ここに送信ロジックを追加
-        alert("お問い合わせを送信しました！");
-        this.onReset(); // フォームをリセット
-      }
-    },
-  }
+  onSubmit() {
+    if (this.$refs.formRef.validate()) {
+      const formData = new FormData();
+      formData.append("name", this.form.name);
+      formData.append("email", this.form.email);
+      formData.append("message", this.form.message);
+
+      // Use Fetch API to send form data
+      fetch("your-server-url/send_mail.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.text())
+        .then((data) => {
+          console.log("Response:", data);
+          alert("お問い合わせを送信しました！");
+          this.onReset(); // Reset the form
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("送信に失敗しました。もう一度お試しください。");
+        });
+    }
+  },
+}
+
 };
 </script>
