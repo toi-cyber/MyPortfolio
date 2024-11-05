@@ -3,6 +3,7 @@
 
     <q-header flat>
       <q-toolbar class="header-menu">
+        v_1.1.0
         <q-btn
           v-for="menu in menuItems"
           :key="menu.label"

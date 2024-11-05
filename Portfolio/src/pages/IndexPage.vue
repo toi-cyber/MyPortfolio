@@ -176,11 +176,11 @@ export default {
         {
           category: 'Languages',
           items: [
-            { name: '中国語', url: '../src/assets/china.png', level: 4 },
-            { name: '英語', url: '../src/assets/us.png', level: 5 },
-            { name: 'スペイン語', url: '../src/assets/spain.png', level: 3 },
-            { name: 'ドイツ語', url: '../src/assets/germany.png', level: 2 },
-            { name: 'フランス語', url: '../src/assets/france.png', level: 2 },
+            { name: '中国語', url: '../assets/china.png', level: 4 },
+            { name: '英語', url: '../assets/us.png', level: 5 },
+            { name: 'スペイン語', url: '../assets/spain.png', level: 3 },
+            { name: 'ドイツ語', url: '../assets/germany.png', level: 2 },
+            { name: 'フランス語', url: '../assets/france.png', level: 2 },
           ]
         },
         {
@@ -240,7 +240,7 @@ export default {
 
       works: [
         {
-          image: './src/assets/torabit.png',
+          image: '../assets/torabit.png',
           alt: 'TORAbit Image',
           genre: 'シャドーイングサービス',
           productName: 'TORAbit',
@@ -253,7 +253,7 @@ export default {
           ],
         },
         {
-          image: './src/assets/torabit.net_lp_.png',
+          image: '../assets/torabit.net_lp_.png',
           alt: 'TORAbit Image',
           genre: 'シャドーイングサービス',
           productName: 'TORAbit LP',
@@ -266,7 +266,7 @@ export default {
           ],
         },
         {
-          image: './src/assets/grasapo.jp_.png',
+          image: '../assets/grasapo.jp_.png',
           alt: '施工AI Image',
           genre: '総合情報サイト',
           productName: 'グラサポ',
@@ -278,9 +278,9 @@ export default {
             { color: 'primary', size: '20px', name: 'desktop_windows' },
           ],
         },
-        
+
         {
-          image: './src/assets/koemane.png',
+          image: '../assets/koemane.png',
           alt: 'AI声真似 Image',
           genre: 'AIボイス生成サービス',
           productName: 'AI声真似（仮）',
@@ -293,7 +293,7 @@ export default {
           ],
         },
         {
-          image: './src/assets/signage.png',
+          image: '../assets/signage.png',
           alt: 'サイネージサイト Image',
           genre: 'デジタルサイネージ管理サイト',
           productName: 'iBoardSignage',
@@ -306,7 +306,7 @@ export default {
           ],
         },
         {
-          image: './src/assets/my-prof.jpg',
+          image: '../assets/my-prof.jpg',
           alt: 'ポートフォリオサイト Image',
           genre: 'ポートフォリオサイト',
           productName: 'TOI TAMURAのポートフォリオ',
@@ -338,45 +338,6 @@ export default {
           icon: 'storage',
           description: '安全で拡張性の高いサーバーサイドの開発を行い、効率的なAPIとデータ管理を提供します。'
         }
-      ],
-      projects: [
-        {
-          name: '大規模ECサイトのバックエンド開発',
-          description: 'Javaを使用し、マイクロサービスアーキテクチャを採用して、高負荷に耐えうるシステムを構築しました。',
-          technologies: ['Java', 'Spring Boot', 'MySQL', 'Redis', 'Docker']
-        },
-        {
-          name: 'データ分析基盤の構築',
-          description: 'AWSを活用し、ビッグデータ処理のためのデータパイプラインを構築しました。',
-          technologies: ['Python', 'AWS Lambda', 'Amazon S3', 'Amazon Redshift']
-        },
-      ],
-      certifications: [
-        { name: 'AWS認定ソリューションアーキテクト – アソシエイト', year: 2022 },
-        { name: 'Oracle認定Javaプログラマ', year: 2020 },
-        { name: '応用情報技術者', year: 2019 },
-      ],
-      workExperience: [
-        {
-          company: 'テックイノベーション株式会社',
-          role: 'シニアバックエンドエンジニア',
-          period: '2020年4月 - 現在',
-          description: '大規模Webアプリケーションの設計・開発・運用を担当'
-        },
-        {
-          company: 'ITソリューションズ株式会社',
-          role: 'ソフトウェアエンジニア',
-          period: '2018年4月 - 2020年3月',
-          description: '業務系アプリケーションの開発に従事'
-        },
-      ],
-      blogs: [
-        { title: 'マイクロサービスアーキテクチャの実践的アプローチ', date: '2023-05-15', url: 'https://example.com/blog1' },
-        { title: 'AWS Lambda を使った効率的なデータ処理', date: '2023-03-10', url: 'https://example.com/blog2' },
-      ],
-      recommendations: [
-        { text: '山田さんは技術力が高く、チームワークも優れています。困難な課題に直面しても、常に前向きに取り組む姿勢が印象的でした。', author: '前職の上司' },
-        { text: '彼のコードは常にクリーンで保守性が高く、チーム全体の生産性向上に大きく貢献しました。', author: '同僚のエンジニア' },
       ],
     }
   },
