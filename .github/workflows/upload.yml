@@ -17,6 +17,9 @@ jobs:
         run: npm install
         working-directory: ./Portfolio
 
+      - name: Install Quasar CLI
+        run: npm install -g @quasar/cli
+
       - name: Build the Quasar project
         run: quasar build
         working-directory: ./Portfolio
