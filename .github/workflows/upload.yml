@@ -1,0 +1,29 @@
+name: Deploy to Lolipop
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにプッシュされた場合にデプロイが実行される
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the Quasar project
+        run: quasar build
+
+      - name: Deploy to Lolipop via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/spa # Quasarのビルド出力ディレクトリ
+          server-dir: / # ロリポップのデプロイ先ディレクトリ
