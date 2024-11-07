@@ -3,7 +3,7 @@
 
     <q-header flat>
       <q-toolbar class="header-menu">
-        v_20241107.1
+        v_20241107.2
         <q-btn
           v-for="menu in menuItems"
           :key="menu.label"
