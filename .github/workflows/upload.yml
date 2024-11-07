@@ -13,14 +13,13 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
-      - name: Change directory to project folder
-        working-directory: ./Portfolio
-
       - name: Install dependencies
         run: npm install
+        working-directory: ./Portfolio
 
       - name: Build the Quasar project
         run: quasar build
+        working-directory: ./Portfolio
 
       - name: Deploy to Lolipop via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -28,5 +27,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/spa # Quasarのビルド出力ディレクトリ
+          local-dir: ./Portfolio/dist/spa # Quasarのビルド出力ディレクトリ
           server-dir: / # ロリポップのデプロイ先ディレクトリ
