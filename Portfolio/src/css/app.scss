@@ -243,6 +243,12 @@ html {
     width: 100%;
     max-width: 400px;
 }
+.dev-num{
+    font-family: var(--main-font);
+    font-size: 8px;
+    margin: 0;
+    width: fit-content;
+}
 @media (min-width: 481px) {
     .omo {
         display: none;
