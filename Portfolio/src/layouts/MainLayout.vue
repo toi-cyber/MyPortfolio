@@ -4,7 +4,7 @@
     <q-header flat>
       <q-toolbar class="header-menu">
         <q-toolbar-title>
-          <p class="dev-num">v_20241107.4</p>
+          <p class="dev-num">v.5</p>
         </q-toolbar-title>
         <q-btn
           v-for="menu in menuItems"

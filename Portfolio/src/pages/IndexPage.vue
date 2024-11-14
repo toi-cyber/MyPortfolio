@@ -231,9 +231,8 @@ export default {
         {
           category: 'Cloud & DevOps',
           items: [
-            { name: 'Google Cloud', icon: 'devicon-googlecloud-plain', level: 5 },
-            { name: 'Azure', icon: 'devicon-azure-plain', level: 3 },
-            { name: 'AWS', icon: 'devicon-amazonwebservices-plain', level: 3 },
+            { name: 'Azure', icon: 'devicon-azure-plain', level: 2},
+            { name: 'AWS', icon: 'devicon-amazonwebservices-plain', level: 2},
           ]
         }
       ],
@@ -306,7 +305,7 @@ export default {
           ],
         },
         {
-          image: '../assets/my-prof.jpg',
+          image: '../assets/toitamura-portfolio.png',
           alt: 'ポートフォリオサイト Image',
           genre: 'ポートフォリオサイト',
           productName: 'TOI TAMURAのポートフォリオ',
