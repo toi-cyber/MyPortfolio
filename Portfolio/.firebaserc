@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "toitamura-portfolio"
-  }
+    "default": "toi-tamura-portfolio"
+  },
+  "targets": {},
+  "etags": {}
 }

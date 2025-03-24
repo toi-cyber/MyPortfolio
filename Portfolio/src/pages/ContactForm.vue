@@ -6,7 +6,7 @@
         <div style="margin-bottom: 16px;" class="text-h6">お問い合わせフォーム</div>
         <p>公式LINEでのお問い合わせがおすすめです。<br>
           <q-btn dense class="q-btn-with-icon" type="a" href="https://lin.ee/tebEM0u" target="_blank" flat no-caps>
-            <img src="../assets/LINE_Brand_icon.png" style="width: 1.7em; margin-right: 8px;" alt="">
+            <img src="/images/LINE_Brand_icon.png" style="width: 1.7em; margin-right: 8px;" alt="">
             <span>公式LINE</span>
           </q-btn>
         </p>

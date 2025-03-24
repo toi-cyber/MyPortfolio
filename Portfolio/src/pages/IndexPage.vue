@@ -70,7 +70,7 @@
                 <div class="section-title">自己紹介</div>
                 <div class="prof-par">
                   <!-- プロフィール画像 -->
-                  <img class="my-prof" src="../assets/my-prof.jpg" alt="Avatar" />
+                  <img class="my-prof" src="/images/my-prof.jpg" alt="Avatar" />
 
                   <!-- プロフィール情報 -->
                   <div class="prof-right">
@@ -106,7 +106,7 @@
 
                       <q-btn dense class="q-btn-with-icon" type="a" href="https://lin.ee/tebEM0u" target="_blank" flat
                         no-caps>
-                        <img src="../assets/LINE_Brand_icon.png" style="width: 1.7em; margin-right: 8px;" alt="">
+                        <img src="/images/LINE_Brand_icon.png" style="width: 1.7em; margin-right: 8px;" alt="">
                         <span>公式LINE</span>
                       </q-btn>
 
@@ -176,11 +176,11 @@ export default {
         {
           category: 'Languages',
           items: [
-            { name: '中国語', url: '../assets/china.png', level: 4 },
-            { name: '英語', url: '../assets/us.png', level: 5 },
-            { name: 'スペイン語', url: '../assets/spain.png', level: 3 },
-            { name: 'ドイツ語', url: '../assets/germany.png', level: 2 },
-            { name: 'フランス語', url: '../assets/france.png', level: 2 },
+            { name: '中国語', url: '/images/china.png', level: 4 },
+            { name: '英語', url: '/images/us.png', level: 5 },
+            { name: 'スペイン語', url: '/images/spain.png', level: 3 },
+            { name: 'ドイツ語', url: '/images/germany.png', level: 2 },
+            { name: 'フランス語', url: '/images/france.png', level: 2 },
           ]
         },
         {
@@ -207,8 +207,12 @@ export default {
             { name: 'Quasar', icon: 'devicon-quasar-plain', level: 5 },
             { name: 'Node.js', icon: 'devicon-nodejs-plain', level: 4 },
             { name: 'Nuxtjs', icon: 'devicon-nuxtjs-plain', level: 3 },
+            { name: 'Next.js', icon: 'devicon-nextjs-plain', level: 2 },
             { name: 'jQuery', icon: 'devicon-jquery-plain', level: 3 },
             { name: 'Laravel', icon: 'devicon-laravel-plain', level: 2 },
+            { name: 'Flutter', icon: 'devicon-flutter-plain', level: 4 },
+           
+
 
           ]
         },
@@ -233,13 +237,14 @@ export default {
           items: [
             { name: 'Azure', icon: 'devicon-azure-plain', level: 2},
             { name: 'AWS', icon: 'devicon-amazonwebservices-plain', level: 2},
+            { name: 'Firebase', icon: 'devicon-firebase-plain', level: 3},
           ]
         }
       ],
 
       works: [
         {
-          image: '../assets/torabit.png',
+          image: '/images/torabit.png',
           alt: 'TORAbit Image',
           genre: 'シャドーイングサービス',
           productName: 'TORAbit',
@@ -252,7 +257,7 @@ export default {
           ],
         },
         {
-          image: '../assets/torabit.net_lp_.png',
+          image: '/images/torabit.net_lp_.png',
           alt: 'TORAbit Image',
           genre: 'シャドーイングサービス',
           productName: 'TORAbit LP',
@@ -265,7 +270,7 @@ export default {
           ],
         },
         {
-          image: '../assets/grasapo.jp_.png',
+          image: '/images/grasapo.jp_.png',
           alt: '施工AI Image',
           genre: '総合情報サイト',
           productName: 'グラサポ',
@@ -279,7 +284,7 @@ export default {
         },
 
         {
-          image: '../assets/koemane.png',
+          image: '/images/koemane.png',
           alt: 'AI声真似 Image',
           genre: 'AIボイス生成サービス',
           productName: 'AI声真似（仮）',
@@ -292,7 +297,7 @@ export default {
           ],
         },
         {
-          image: '../assets/signage.png',
+          image: '/images/signage.png',
           alt: 'サイネージサイト Image',
           genre: 'デジタルサイネージ管理サイト',
           productName: 'iBoardSignage',
@@ -305,13 +310,26 @@ export default {
           ],
         },
         {
-          image: '../assets/toitamura-portfolio.png',
+          image: '/images/toitamura-portfolio.png',
           alt: 'ポートフォリオサイト Image',
           genre: 'ポートフォリオサイト',
           productName: 'TOI TAMURAのポートフォリオ',
           description:
             '私のポートフォリオサイトです。わかりやすさを追求した配置、配色を意識しています。',
           url: 'https://www.toitamura-portfolio.jp/#/',
+          icons: [
+            { color: 'primary', size: '20px', name: 'smartphone' },
+            { color: 'primary', size: '20px', name: 'desktop_windows' },
+          ],
+        },
+        {
+          image: '/images/dotchinomikata.png',
+          alt: 'どっちのミカタ？ Image',
+          genre: 'AIジャッジサイト',
+          productName: 'どっちのミカタ？',
+          description:
+            'AIによる意見補強と投票機能で日常のモヤモヤに白黒つけるサービスです。',
+          url: 'https://docchino-mikata.web.app/top',
           icons: [
             { color: 'primary', size: '20px', name: 'smartphone' },
             { color: 'primary', size: '20px', name: 'desktop_windows' },
